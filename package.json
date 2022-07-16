@@ -16,7 +16,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node index",
+    "start": "node index.js",
     "deploy": "claudia create --version dev --region us-east-1 --api-module api"
   },
   "author": "",
