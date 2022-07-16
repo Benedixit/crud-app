@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <%- include('./partials/header'); %>
+  <body>
+    <%- include('./partials/navbar'); %>
+
+    <div class="container mt-3 col-sm-5">
+
+      <form action="/update/<%= id %>" method="post">
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="name" name="name" value="<%= name %>">
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" value="<%= email %>">
+        </div>
+
+        <div class="mb-3">
+          <label for="address" class="form-label">Address</label>
+          <input type="text" class="form-control" id="address" name="address" value="<%= address %>">
+        </div>
+
+        <div class="mb-3">
+          <label for="bio" class="form-label">Bio</label>
+          <textarea class="form-control" id="bio" name="bio" aria-describedby="emailHelp"><%= bio %></textarea>
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary">Update Customer Details</button>
+      </form>
+      
+    </div>
+    <%- include('./partials/footer'); %>
+
+    
+  </body>
+</html>
