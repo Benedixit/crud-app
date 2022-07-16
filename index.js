@@ -6,6 +6,7 @@ const Customer = require('./models/Customer')
 const bodyParser = require('body-parser')
 const session = require('express-session')
 const flash = require('connect-flash')
+const port = process.env.PORT || 8080
 require('dotenv').config()
 
 app.use(flash());
@@ -31,7 +32,7 @@ app.set('view engine', 'ejs')
 
 
 db.once('open', (req, res)=>{
-	app.listen(3000, ()=>{
+	app.listen(port, ()=>{
 		console.log("Loading")
 	})
 })
