@@ -16,7 +16,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node index"
+    "start": "node index",
+    "deploy": "claudia create --version dev --region us-east-1 --api-module api"
   },
   "author": "",
   "license": "ISC"
